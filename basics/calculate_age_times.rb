@@ -32,7 +32,7 @@ puts "Age as as minutes: #{age_as_minutes}"
 
 ## ++++++++++++++++++ using date class ++++++++++++++++++ ##
 
-## using date class the result is exact
+## using date class the result is accurate
 
 # returns the age as days like rational number so we parse it to integer
 age_as_days = (Date.today - Date.new(1998,9,9)).to_i

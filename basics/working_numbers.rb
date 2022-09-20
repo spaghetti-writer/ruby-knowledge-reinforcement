@@ -1,5 +1,5 @@
 
-# # # # we have all the clasics operators, +, - , * , / , %
+# # # we have all the clasics operators, +, - , * , / , %(module - returns the remainder of a division)
 
 # # # # exponent
 # puts 2 ** 4 # => 16
@@ -39,3 +39,34 @@
 
 # puts Math.sqrt(36) # => 6
 # puts Math.log(1) # => 0
+
+##### ================================= casting strings to numbers ================================= ####
+
+# do operations with numbers as strings doesn't work since strings not have operations like numbers
+
+# eg
+# "1" + "2" => # will be output "12", basically concat the values instead to do a sum 
+
+# and more complex operations like subtraction, product... will throw error
+# puts "1" - "2" # => undefined method `-' for "1":String (NoMethodError)
+# puts "1" * "2" # => `*': no implicit conversion of String into Integer (TypeError)
+# puts "1" / "2" # =>  undefined method `/' for "1":String (NoMethodError)
+
+# in order to perform the operations we have to cast the string to numbers using the existing methods
+# string.to_i to cast string to integer
+# string.to_f to cast string to float
+
+# if you put a literal string instead a number as string to cast, ruby will return 0
+# puts "Hello world today is tuesday".to_i # => 0
+# puts "Hello world today is tuesday".to_f # => 0.0
+
+# casting to integers
+# puts "8".to_i / "3".to_i # => 2
+
+# casting to floats
+# puts "8".to_f / "3".to_f # => 2.6666...
+
+# random 
+# call random method => rand
+
+# puts rand() # => return a float different each time
