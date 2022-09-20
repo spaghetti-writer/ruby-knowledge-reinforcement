@@ -8,6 +8,10 @@ spe_char_example = "Hola \"mundo\""
 second_string = "Este es un string"
 
 # don't mutate the original string
+# some methods have a convencion called bang methods and we can use it adding the exclamation mark ! at the end
+# after call the method usually will modify the object that they’re being called on.
+# ex: second_string.reverse!
+
 # # # # #  Upcase, downcase
 
 # puts second_string.upcase() # => ESTE ES UN STRING 
