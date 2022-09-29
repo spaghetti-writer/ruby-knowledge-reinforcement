@@ -25,7 +25,7 @@ case today
 	when 'friday'
 		puts 'tomorrow i\'ll rest all the afternoon'
 	when 'sunday'
-		puts 'nooo! :c, tomorrow is gonna be monday again'
+		puts 'nooo! :c, tomorrow will be monday again'
 	else
 		# default if none of the above option validations handle the input value
 		puts 'nothig to do'
