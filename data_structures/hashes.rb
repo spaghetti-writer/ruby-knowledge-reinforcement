@@ -68,3 +68,24 @@ countries[:cl] = "Chile"
 
 # htest = Hash[id: 1, name: "will", age: 24, hobby: "Videogames"]
 # p htest["id"]
+
+# # # # validating if a key exist
+
+# puts countries.has_key?(:name) # => false
+# puts countries.has_key?(:cl) # => true
+
+# # # # concat hash
+# + or concat method doesn't work with hashes, instead there's the merge method
+# this method doesn't mutate the implicated hashes to do that uses: merge! form
+first_half = {a: 'a'}
+second_half = {b: 'b'}
+
+# complete_hash = first_half + second_half # => throws error
+# complete_hash = first_half.concat(second_half) # => throws error
+# complete_hash = first_half.merge(second_half) # => {:a=>"a", :b=>"b"}
+
+
+# # # # delete a key-value
+# # mutates the hash
+# p countries.delete('mx') # => Mexico
+# p countries # => {"usa"=>"Unated states of America", "ca"=>"Canada", "au"=>"Australia", :cl=>"Chile"}

@@ -28,7 +28,7 @@ end
 # we can also declare in a row
 # use it just for basic outputs
 # puts "a is bigger than b" if a > b
-# only works in this way with basic operations
+# only works in this way with basic operations (no more than one row)
 
 # we can use 'else' when have a validations with two possible results like the first exemple
 
