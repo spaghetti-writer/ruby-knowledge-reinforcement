@@ -89,3 +89,7 @@ second_half = {b: 'b'}
 # # mutates the hash
 # p countries.delete('mx') # => Mexico
 # p countries # => {"usa"=>"Unated states of America", "ca"=>"Canada", "au"=>"Australia", :cl=>"Chile"}
+
+# # # advance delete
+# delete_if
+# merged_hash = hash.delete_if { |k,v| validation }
