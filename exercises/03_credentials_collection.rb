@@ -1,48 +1,46 @@
-# v1
+# v2
 # The hash should be created here
-credentials = []
 keep_recording = true
+credentials = []
+input_origins = {
+  site: 'site name',
+  user: 'user name',
+  password: 'password'
+}
 
 # The validator method should go here
 def credential_validator(_input, _input_origin)
 
-  if _input.strip.length == 0
+  # also can be _input.strip.length.zero?
+  while _input.strip.length == 0 do
     puts "\n[The input can't be blank, try again]"
     print "Please enter the #{_input_origin}: "
-    temp_input = gets.chomp
-    credential_validator(temp_input, _input_origin)
-  else
-    return _input
+    _input = gets.chomp
   end
-
+  
+  _input
 end
 
 # The user input loop should go here
 while keep_recording do
-  print "\nPlease enter the site name (enter 'exit' to exit): "
-  # The user input validation should happen here
-  site_name = credential_validator(gets.chomp, 'site name')
+  puts "\nEnter 'exit' to end the record process\n"
 
-  if site_name != 'exit'
+  credential_item = {}
+  input_origins.each do |key, value|
+    print "Please enter the #{value}: "
+    user_input = credential_validator(gets.chomp, value)
+    credential_item[key] = user_input
 
-    print "Please enter the user name: "
-    # The user input validation should happen here
-    user_name = credential_validator(gets.chomp, 'user name')
-
-    print "Please enter the password: "
-    # The user input validation should happen here
-    password = credential_validator(gets.chomp, 'password')
-
-    credentials.push({
-      site: site_name,
-      user: user_name,
-      password: password
-    })
-
-  else
-    keep_recording = false
+    if user_input.downcase == 'exit'
+      keep_recording = false 
+      break
+    end
   end
-  
+
+  if keep_recording
+    credentials.push(credential_item)
+  end
+
 end
 
 # The display of the credentials hash should go here
