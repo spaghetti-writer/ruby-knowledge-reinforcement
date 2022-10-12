@@ -4,12 +4,12 @@ keep_recording = true
 credentials = []
 input_origins = {
   site: 'site name',
-  user: 'user name',
+  user: 'username',
   password: 'password'
 }
 
 # The validator method should go here
-def credential_validator(_input, _input_origin)
+def input_validator(_input, _input_origin)
 
   # also can be _input.strip.length.zero?
   while _input.strip.length == 0 do
@@ -28,7 +28,8 @@ while keep_recording do
   credential_item = {}
   input_origins.each do |key, value|
     print "Please enter the #{value}: "
-    user_input = credential_validator(gets.chomp, value)
+    # The method to add valid input to the hash
+    user_input = input_validator(gets.chomp, value)
     credential_item[key] = user_input
 
     if user_input.downcase == 'exit'
