@@ -1,11 +1,11 @@
 not_exit = true
 contacts_directory = []
 
-while not_exit
+while not_exit do
 
 	print 'Please enter a contact name or exit to end: '
 
-	input = gets.chomp
+	input = gets.chomp.downcase
 
 	if input == 'exit'
 		not_exit = false
