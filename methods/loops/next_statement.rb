@@ -1,4 +1,5 @@
 # avoids the current element from an iteration and do the process with the  next item, being this the new current
+# Go to the next iteration of the loop without evaluating any of the rest of the code
 counter = 0
 
 puts 'These are odd numbers'
