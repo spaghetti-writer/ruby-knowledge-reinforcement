@@ -42,6 +42,8 @@ end
 # # blocks can have a name and be called by this
 
 # requires & symbol before the name, ex &block
+# by this way the param &block is basically a Proc
+# important info: use yield is faster than this way
 def explicit_block(&block)
   block.call # same as yield
 end
