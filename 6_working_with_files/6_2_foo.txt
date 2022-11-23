@@ -1,0 +1,2 @@
+This file contains text 
+and this must not be removed
