@@ -41,3 +41,9 @@ File.open('6_2_foo.txt', 'r') do |f|
 end
 
 # p file.read # => throws error
+
+# # # # # # # # checking if a file exists
+# File.exists?('file_name')
+
+p File.exists?('6_2_foo.txt') # => true
+p File.exists?('foo.txt') # => false
